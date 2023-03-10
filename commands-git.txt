@@ -1,4 +1,5 @@
 git clone
-git remote add origin https://github.com/benjamin-arfi/git-begins.git
+git add 
 git branch -M main
+git commit -m "first commit
 git push -u origin main
