@@ -1,12 +1,4 @@
 liste = [45,5,47,32,22,78] 
-"""def longueur(liste):
-    compteur = 0
-    for i in liste:
-        compteur += 1
-    return compteur
-def ajout(liste,x):
-    liste += [x]
-    return liste"""
 def tri_insertion(liste):
     L = list(liste) # copie de la liste
     N = len(L)

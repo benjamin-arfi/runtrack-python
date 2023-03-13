@@ -37,15 +37,25 @@ import math
     else :
 
         return(0)"""
-L = [22.4, 4.0,16.22, 9.10, 11.00, 12.22, 14.20, 5.20, 17.50]
+liste = [22.4, 4.0,16.22, 9.10, 11.00, 12.22, 14.20, 5.20, 17.50]
 def ajout(liste,x):
     liste += [x]
     return liste
+def tri_insertion(liste):
+    L = list(liste) # copie de la liste
+    N = len(L)
+    for n in range(1,N):
+        cle = L[n]
+        j = n-1
+        while j>=0 and L[j] > cle:
+            L[j+1] = L[j] # decalage
+            j = j-1
+        L[j+1] = cle
+    return L
 def arrondir():
-    liste1 = []
-    for n in L:
-        if n > float(.5):
-            ajout(liste1, int(n))
+    for n in tri_insertion(liste):
+        if n < float((n)+1/2):
+            print (int(n))
         else:
-             ajout(liste1, int(n-1))
-print(arrondir())
+            print( int(n+1))
+arrondir()
